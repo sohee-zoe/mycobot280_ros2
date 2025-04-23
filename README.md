@@ -22,7 +22,12 @@ myCobot ROS2 package
 For using this package, the [Python api](https://github.com/elephantrobotics/pymycobot) library should be installed first.
 
 ```bash
-pip install pymycobot --user
+# pip install pymycobot --user
+git clone https://github.com/elephantrobotics/pymycobot.git
+cd pymycobot
+git checkout v3.5.2
+sed -i 's#^PI_PORT = "/dev/ttyAMA0"#PI_PORT = "/dev/ttyJETCOBOT"#' ./pymycobot/__init__.py
+sudo python3 setup.py install
 ```
 
 ### 1.2 Package Download and Install
