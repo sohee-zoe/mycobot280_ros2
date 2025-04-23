@@ -60,7 +60,7 @@ class Raw(object):
 
 
 def teleop_keyboard():
-    mc = MyCobot("/dev/ttyAMA0", 1000000)
+    mc = MyCobot("/dev/ttyJETCOBOT", 1000000)
     time.sleep(0.05)
     mc.set_fresh_mode(1)
     time.sleep(0.05)

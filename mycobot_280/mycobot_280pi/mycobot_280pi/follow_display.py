@@ -22,7 +22,7 @@ else:
 class Talker(Node):
     def __init__(self):
         super().__init__("follow_display")
-        self.declare_parameter('port', '/dev/ttyAMA0')
+        self.declare_parameter('port', '/dev/ttyJETCOBOT')
         self.declare_parameter('baud', 1000000)
    
         port = self.get_parameter("port").get_parameter_value().string_value
